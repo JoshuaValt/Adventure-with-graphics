@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace Adventure_with_graphics
 {
@@ -23,6 +24,23 @@ namespace Adventure_with_graphics
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string[] mapLines = File.ReadAllLines(@"C:\git\Adventure-with-graphics\map1.txt");
+            foreach (var line in mapLines)
+            {
+                foreach (var character in line)
+                {
+
+                }
+            }
         }
     }
 }
